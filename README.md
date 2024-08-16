@@ -2,8 +2,6 @@
 
 CBFT is an illustration of how blockchain and hyperledger can be used to model cross border payments involving banks and customers in different currencies. *This is not about any cryptocurrency or its usage for payments.* The proposed solution uses fiat currencies but payments flow through distributed ledgers thus reducing correspondent banks/additional hops in the existing payments networks. If you are interested in reading the *motivation* behind creating this app then  please visit [A case for banks to introduce B2B "real-time" Cross Border Funds Transfer (CBFT) Services for SMEs using Blockchain - Part 1](https://www.linkedin.com/pulse/case-banks-introduce-b2b-real-time-cross-border-funds-raj-m-shimpi/)
 
-You can also access youtube video on howto setup and run this app at https://www.youtube.com/watch?v=w0Ybr5_Gh8A
-
 
 For our payment network, we will setup  of 1 peer, one orderer service, one CA authority service for certificate issuance and verification and one channel on which our peers will communicate. The initial setup of the network is populated with:
 
@@ -15,21 +13,38 @@ For our payment network, we will setup  of 1 peer, one orderer service, one CA a
 
 4. We are setting up only one channel and all the banks in the network will subscribe to it. In real scenarios, consider setting up separate channels among group of banks to protect privacy of transactions for competitive purposes.
 
+CBFT (Cross-Border Funds Transfer) is an innovative concept demonstrating how blockchain and Hyperledger technology can be leveraged to facilitate cross-border payments between banks and customers across different currencies. Here’s a breakdown of what CBFT entails:
 
-## CBFT Features
-Please download/clone the repo from github available at: https://github.com/Archstrategy/crossBorderFundsTransfer.git. At a high level, package has all the modules and sources to install components. Node.js scripts (clients) are provided for the following functionalities:
+### Key Features of CBFT:
 
-1. pay.js - script to execute and invoke a payment between customers at different or same banks
+- **Blockchain and Hyperledger Integration:**
+  - **Blockchain Technology:** Provides a distributed ledger that ensures transparency, security, and immutability of transactions.
+  - **Hyperledger Framework:** Facilitates the development of permissioned blockchains, which are particularly suited for enterprise use cases like cross-border payments.
 
-2. createBank.js - create a new bank
+- **Fiat Currency Transactions:**
+  - Unlike many blockchain-based payment systems that rely on cryptocurrencies, CBFT uses traditional **fiat currencies** for transactions.
+  - The focus is on enhancing the existing payment systems by reducing complexity, rather than introducing new currencies.
 
-3. createCustomer.js - create a new customer associated with an existing bank or a new bank. Logically you should create a bank first, before adding a customer to a new bank.
+- **Reduced Intermediaries:**
+  - Traditional cross-border payments often involve multiple correspondent banks, leading to delays and higher costs.
+  - CBFT aims to **reduce or eliminate the need for these intermediaries**, thereby speeding up the process and lowering transaction fees.
 
-4. ceateForex.js - create a new forex pair with average exchange rate (bid/ask are not supported)
+- **Distributed Ledger:**
+  - Payments are recorded on a **distributed ledger**, providing a single source of truth accessible to all parties involved.
+  - This reduces the risk of discrepancies and disputes, as all transactions are transparent and verifiable.
 
-5. queryBank.js, queryCustomer.js, queryForex.js - to search individual records
+- **Security and Compliance:**
+  - The use of a permissioned blockchain ensures that only authorized parties can participate in the network, enhancing security and compliance with regulatory requirements.
+  - Smart contracts can be utilized to enforce compliance with various legal and regulatory standards automatically.
 
-6. queryAll.js - to dump the entire ledger
+### Benefits of CBFT:
+
+- **Efficiency:** Faster processing of cross-border payments with fewer intermediaries.
+- **Cost-Effective:** Lower transaction costs due to the reduced need for correspondent banks.
+- **Transparency:** Clear and immutable records of all transactions, accessible by all relevant parties.
+- **Security:** Enhanced security through the use of permissioned blockchain networks.
+
+CBFT represents a significant advancement in the way cross-border payments can be handled, making the process more efficient, secure, and cost-effective without relying on cryptocurrencies. It's a practical application of blockchain in traditional finance, focusing on solving real-world problems in the payments industry.
 
 
 ## Directory Structure
